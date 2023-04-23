@@ -60,13 +60,16 @@ public class Dao {
 		}
 	}
 
-	public ArrayList<Asiakas> getAllItems() {
+	public ArrayList<Asiakas> getAllItems(String searchStr) {
 		ArrayList<Asiakas> asiakkaat = new ArrayList<Asiakas>();
 		sql = "SELECT * FROM asiakkaat ORDER BY asiakas_id DESC"; // Suurin id tulee ensimmäisenä
 		try {
 			con = yhdista();
 			if (con != null) { // jos yhteys onnistui
 				stmtPrep = con.prepareStatement(sql);
+				stmtPrep.setString(1, "%" + searchStr + "%");
+				stmtPrep.setString(2, "%" + searchStr + "%");
+				stmtPrep.setString(3, "%" + searchStr + "%");
 				rs = stmtPrep.executeQuery();
 				if (rs != null) { // jos kysely onnistui
 					while (rs.next()) {

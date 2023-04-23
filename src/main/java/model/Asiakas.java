@@ -3,11 +3,9 @@ package model;
 public class Asiakas {
 	private int asiakas_id;
 	private String etunimi, sukunimi, puhelin, sposti;
-
 	public Asiakas() {
 
 	}
-
 	public Asiakas(int asiakas_id, String etunimi, String sukunimi, String puhelin, String sposti) {
 		this.asiakas_id = asiakas_id;
 		this.etunimi = etunimi;

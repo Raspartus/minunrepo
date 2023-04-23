@@ -1,6 +1,6 @@
 //funktio tietojen hakemista varten. Kutsutaan backin GET metodia
 function haeAsiakkaat() {
-	let url = "Asiakkaat.java"; 
+	let url = "asiakkaat?hakusana=" + document.getElementById("hakusana").value; 
 	let requestOptions = {
         method: "GET",
         headers: { "Content-Type": "application/x-www-form-urlencoded" }       
