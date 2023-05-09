@@ -1,14 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <script src="scripts/mainasiakas.js"></script>
+<script src="scripts/io.js"></script>
 <link rel = "stylesheet" type = "text/css" href = "css/main.css">
 <title>Asiakkaiden listaus</title>
 </head>
-<body>
+<body onload="asetaFocus('hakusana')" onkeydown = "tutkiKey(event, 'listaa')">
 <table id="listaus">
 	<thead>	
 		<tr>
